@@ -23,7 +23,7 @@ module.exports = {
     // Filter by showCompleted
     filteredTodos = filteredTodos.filter((todo) => {
       // by default return only todos with completed status false
-      // or also show all totods if showcompleted if true
+      // or also show all todos if showCompleted if true
       // (i.e. we want to see all todos including completed)
       return !todo.completed || showCompleted; 
     });
