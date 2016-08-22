@@ -1,0 +1,36 @@
+.todo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background .3s ease;
+  
+  p {
+    margin: 0;
+  }
+  
+  input[type="checkbox"] {
+    margin: 0;
+  }
+  
+  > :first-child {
+    margin-right: 1rem;
+  }
+  
+  &:hover {
+    background: #f0f0f0;
+  }
+  
+}
+
+.todo__subtext {
+  color: #999;
+}
+
+.todo-completed {
+  p, todo__subtext {
+    color: $light-color;
+    text-decoration: line-through;
+  }
+}

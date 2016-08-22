@@ -3,7 +3,7 @@
   padding: 0;
   background: $light-grey;
   border: 1px solid $light-grey-border;
-  border-radius: 1px;
+  border-radius: 5px;
 }
 
 .container__header {
@@ -21,7 +21,17 @@
   }
 }
 
+.container__message {
+  margin: 2rem auto;
+  color: $light-color;
+  text-align: center;
+}
+
 .container__footer {
-  border: 1px solid $light-grey-border;
+  border-top: 1px solid $light-grey-border;
   padding: 1rem 1rem 0 1rem;
+}
+
+input[type="text"], input[type="search"] {
+  box-shadow: none;
 }

@@ -18,14 +18,21 @@ var Todo = React.createClass({
     
     return message + moment.unix(timestamp).format('MMM Do YYYY @ h:mm a');
   },
+  pickClassName: function (completed) {
+    return completed ? 'todo todo-completed' : 'todo';
+  },
   render: function () {
     var {text, completed, createdAt, completedAt} = this.props;
     
     return (
-      <div onClick={this.handleClick}>
-        <input type="checkbox" checked={completed} onChange={()=>{}}/>
-        <p>{text}</p>
-        <p>{this.renderDate(createdAt, completedAt, completed)}</p>
+      <div className={this.pickClassName(completed)} onClick={this.handleClick}>
+        <div>
+          <input type="checkbox" checked={completed} onChange={()=>{}}/>
+        </div>
+        <div>
+          <p>{text}</p>
+          <p className="todo__subtext">{this.renderDate(createdAt, completedAt, completed)}</p>
+        </div>
       </div>
     );
   }
