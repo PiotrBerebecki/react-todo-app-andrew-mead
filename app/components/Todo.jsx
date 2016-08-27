@@ -1,11 +1,13 @@
 var React = require('react');
+var {connect} = require('react-redux');
 var moment = require('moment');
+var actions = require('actions');
 
-var Todo = React.createClass({
+export var Todo = React.createClass({
   handleClick: function () {
-    var {id} = this.props;
+    var {id, dispatch} = this.props;
     
-    this.props.onToggle(id);
+    dispatch(actions.toggleTodo(id));
   },
   renderDate: function (createdAt, completedAt, completed) {
     var message = 'Created ';
@@ -38,4 +40,4 @@ var Todo = React.createClass({
   }
 });
 
-module.exports = Todo;
+export default connect()(Todo);
