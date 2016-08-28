@@ -15,6 +15,7 @@ The technologies used include:
 * Karma
 * Mocha
 * Foundation (front-end framework)
+* Firebase
 * Git
 * GitHub
 * Heroku
