@@ -5,8 +5,6 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 module.exports = {
   entry: [
-    'webpack-dev-server/client?http://0.0.0.0:3001',
-    'webpack/hot/only-dev-server',
     'script!jquery/dist/jquery.min.js',
     'script!foundation-sites/dist/foundation.min.js',
     './app/app.jsx'
@@ -15,7 +13,6 @@ module.exports = {
     jquery: 'jQuery'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.ProvidePlugin({
       '$': 'jquery',
       'jQuery': 'jquery'
@@ -27,9 +24,8 @@ module.exports = {
     })
   ],
   output: {
-    path: __dirname + '/temp-hot-loader',
-    filename: '../public/bundle.js',
-    publicPath: '/'
+    path: __dirname,
+    filename: './public/bundle.js'
   },
   resolve: {
     root: __dirname,
@@ -50,7 +46,10 @@ module.exports = {
   module: {
     loaders: [
       {
-        loaders: ['react-hot', 'babel-loader?presets[]=react,presets[]=es2015,presets[]=stage-0'],
+        loader: 'babel-loader',
+        query: {
+          presets: ['react', 'es2015', 'stage-0']
+        },
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
       }
