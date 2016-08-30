@@ -36,12 +36,14 @@ export var todosReducer = (state = [], action) => {
         } else {
           return todo;
         }
-      });sss
+      });
     case 'ADD_TODOS':
       return [
         ...state,
         ...action.todos
       ];
+    case 'LOGOUT':
+      return [];
     default:
       return state;
   }
