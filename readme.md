@@ -1,7 +1,7 @@
 # React ToDo App
 ---
 
-Live version can be seen on [Heroku](Link coming soon). The app sleeps on a free server so you may need to wait a couple of seconds for it to wake up.
+Live version can be seen on [Heroku](http://still-shelf-97426.herokuapp.com/). The app sleeps on a free server so you may need to wait a couple of seconds for it to wake up.
 
 The app has been developed by Piotr Berebecki as part of undertaking an excellent course: [The Complete React Web App Developer Course](https://www.udemy.com/the-complete-react-web-app-developer-course/) by Andrew Mead.
 
@@ -16,6 +16,7 @@ The technologies used include:
 * Mocha
 * Foundation (front-end framework)
 * Firebase
+* OAuth
 * Git
 * GitHub
 * Heroku
